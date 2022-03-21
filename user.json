@@ -1,0 +1,37 @@
+[
+    {
+      "userName": "jackSparrow",
+      "msisdn": "NA",
+      "userID": "NGD0000066753",
+      "loginID": "jackteststaff",
+      "userNameMsisdn": "jackSparrow (NA)"
+    },
+    {
+      "userName": "rarya_staff",
+      "msisdn": "72147852369",
+      "userID": "NGD0000002762",
+      "loginID": "rarya_staff",
+      "userNameMsisdn": "rarya_staff (72147852369)"
+    },
+    {
+      "userName": "staff",
+      "msisdn": "123457689",
+      "userID": "NGD0000002781",
+      "loginID": "staff",
+      "userNameMsisdn": "staff (123457689)"
+    },
+    {
+      "userName": "staffbal",
+      "msisdn": "9697078284",
+      "userID": "NGD0000002782",
+      "loginID": "staffbj",
+      "userNameMsisdn": "staffbal (9697078284)"
+    },
+    {
+      "userName": "ydsitStaffNew",
+      "msisdn": "NA",
+      "userID": "NGD0000057883",
+      "loginID": "ydsitStaffNew",
+      "userNameMsisdn": "ydsitStaffNew (NA)"
+    }
+  ]

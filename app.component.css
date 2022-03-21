@@ -1,0 +1,310 @@
+.chart-diplay{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 3em;
+}
+
+.button {
+    background-color: #62d4b9;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+
+  .side-menus {
+    float: left;
+    width: 100%;
+}
+
+@media screen and (max-width: 1024px){
+.side-header.slide-out {
+    left: -220px;
+}
+}
+@media screen and (max-width: 1024px){
+.side-header.slide-out {
+    -webkit-transform: translate(25px);
+    -moz-transform: translate(25px);
+    -ms-transform: translate(25px);
+    -o-transform: translate(25px);
+    transform: translate(25px);
+}
+}
+.side-header.slide-out {
+    left: -200px;
+}
+@media screen and (max-width: 1024px){
+.side-header {
+    padding-top: 0;
+}
+}
+@media screen and (max-width: 1024px){
+.side-header {
+    -webkit-box-shadow: 0 0 5px #e3e3e3;
+    -moz-box-shadow: 0 0 5px #e3e3e3;
+    -ms-box-shadow: 0 0 5px #e3e3e3;
+    -o-box-shadow: 0 0 5px #e3e3e3;
+    box-shadow: 0 0 5px #e3e3e3;
+}
+}
+@media screen and (max-width: 1024px){
+.side-header {
+    width: 250px;
+    -webkit-transform: translate(-255px);
+    -moz-transform: translate(-255px);
+    -ms-transform: translate(-255px);
+    -o-transform: translate(-255px);
+    transform: translate(-255px);
+}
+}
+.side-header {
+    padding-top: 56px;
+}
+.side-header {
+    padding-top: 90px;
+    background: #fff;
+    float: left;
+    height: 100%;
+    position: fixed;
+    -webkit-box-shadow: 7px 0 15px 0 rgb(69 90 100 / 20%);
+    -moz-box-shadow: 7px 0 15px 0 rgba(69, 90, 100, 0.2);
+    -ms-box-shadow: 7px 0 15px 0 rgba(69, 90, 100, 0.2);
+    -o-box-shadow: 7px 0 15px 0 rgba(69, 90, 100, 0.2);
+    box-shadow: 7px 0 15px 0 rgb(69 90 100 / 20%);
+    -webkit-transition: all 0.25s ease-out 0s;
+    -moz-transition: all 0.25s ease-out 0s;
+    -ms-transition: all 0.25s ease-out 0s;
+    -o-transition: all 0.25s ease-out 0s;
+    transition: all 0.25s ease-out 0s;
+    width: 255px;
+    top: 0;
+    left: 0;
+    z-index: 99 !important;
+}
+.ps-container {
+    -ms-touch-action: auto;
+    touch-action: auto;
+    overflow: hidden !important;
+    -ms-overflow-style: none;
+}
+
+
+
+/* The side navigation menu */
+.sidenav {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    left: 0;
+    background-color: #111; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+  }
+  
+  /* The navigation menu links */
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  /* When you mouse over the navigation links, change their color */
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
+  
+  /* Position and style the close button (top right corner) */
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  
+  /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+  #main {
+    transition: margin-left .5s;
+    padding: 20px;
+  }
+  
+  /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
+
+
+
+
+
+
+  .sidenav {
+    height: 100%;
+    width: 213px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    padding-top: 20px;
+    border-radius: 0px 18px;
+    overflow-y: hidden; /* Hide vertical scrollbar */
+  overflow-x: hidden;
+  }
+  
+  .sidenav a {
+    padding: 22px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 30px;
+    color: #818181;
+    display: block;
+  }
+  
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
+  
+  .main {
+    margin-left: 160px; /* Same as the width of the sidenav */
+    font-size: 28px; /* Increased text to enable scrolling */
+    padding: 0px 56px;
+  }
+  
+  @media screen and (max-height: 3450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
+
+  .panel-widget {
+    background: #fff none repeat scroll 0 0;
+    border-radius: 5px;
+    -ms-box-shadow: 0 3px 15px 0 rgba(0, 0, 0, 0.1);
+    -o-box-shadow: 0 3px 15px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 0 3px 15px 0 rgb(0 0 0 / 17%);
+    float: left;
+    margin-right: 33px;
+    width: 98.4%;
+    height: 167px;
+    margin-top: -23px !important;
+    padding: 0px 32px;
+}
+
+.widget {
+  background: #fff none repeat scroll 0 0;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  margin-top: 30px;
+  display: inline-block;
+  position: relative;
+  -webkit-box-shadow: 0 3px 15px 0 rgb(0 0 0 / 10%);
+  -moz-box-shadow: 0 3px 15px 0 rgba(0, 0, 0, 0.1);
+  -ms-box-shadow: 0 3px 15px 0 rgba(0, 0, 0, 0.1);
+  -o-box-shadow: 0 3px 15px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 3px 15px 0 rgb(0 0 0 / 10%);
+  width: 100%;
+}
+
+.quick-all-report {
+  float: left;
+  padding: 30px 0px;
+  text-align: center;
+  width: 100%;
+}
+
+.quick-all {
+  float: left;
+  width: 100%;
+}
+.quick-all > p {
+  float: left;
+  font-size: 14px;
+  margin: 0;
+  width: 100%;
+}
+.visito-country-list {
+  float: left;
+  width: 51.5%;
+}
+.visito-country-list > ul > li.title {
+  background: rgba(0, 0, 0, 0) linear-gradient(-135deg, #1de9b6 0%, #1dc4e9 100%) repeat scroll 0 0;
+  color: #fff;
+  line-height: 30px;
+  margin-bottom: 0;
+  text-transform: capitalize;
+}
+.visito-country-list > ul > li:nth-child(2n+1) {
+  background: #f4f4f4 none repeat scroll 0 0;
+}
+.visito-country-list > ul > li {
+  float: left;
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 50px;
+  width: 100%;
+}
+.title {
+  float: left;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 40px;
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+tr {
+  border-bottom: 1px solid #ddd;
+}
+th {
+  text-align: left;
+  font-size: 10px;
+}
+td {
+  text-align: left;
+  font-size: 10px;
+}
+.row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+.widget-title > h4::after {
+  background: rgba(0, 0, 0, 0) linear-gradient(to right, #b275f0 0%, #7575f0 100%) repeat scroll 0 0;
+  content: "";
+  height: 20px;
+  left: -25px;
+  position: absolute;
+  top: 0;
+  width: 4px;
+}
+.widget-title[_ngcontent-c0] > h4[_ngcontent-c0]::after {
+  background: rgba(0, 0, 0, 0) linear-gradient(to right, #dc1c13 0%, #dc1c13 100%) repeat scroll 0 0;
+  content: "";
+  height: 30px;
+  left: -3px;
+  position: absolute;
+  top: 1px;
+  width: 4px;
+}
