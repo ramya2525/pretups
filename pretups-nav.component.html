@@ -1,0 +1,274 @@
+<!-- <div class="chart-diplayh">
+  <div style="width: 60%; margin: auto">
+    <canvas id="bar"></canvas>
+    <select [(ngModel)]="lessThanOrGreaterThan" style="width: 150px;height: 30px;">
+      <option value='lessThan'>Less Than</option>
+      <option value='greaterThan'>Greater Than</option>
+    </select>&nbsp;&nbsp;
+    <input [(ngModel)]="filterLimit" placeholder="Filter Limit" style="width: 150px;height: 30px;"><br><br>
+    <button class="button" (click)="applyFilter(filterLimit)">Apply Filter</button>
+  
+<div style="margin-left: auto">
+  <select [(ngModel)]="from" style="width: 150px;height: 30px;">
+    <option *ngFor="let m of months" [value]='m.value'>{{m.month}}</option>
+  </select>
+&nbsp;&nbsp;
+
+<select [(ngModel)]="toMonth" style="width: 150px;height: 30px;">
+  <option *ngFor="let m1 of months" [value]='m1.value'>{{m1.month}}</option>
+</select> 
+</div>
+
+<button class="button" (click)="applyDateFilter()">Apply Date Filter</button>
+  
+    
+
+
+
+<-- Include Required Prerequisites -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script type="text/javascript" src="//cdn.jsdelivr.net/jquery/1/jquery.min.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/bootstrap/3/css/bootstrap.css" />
+ 
+<!-- Include Date Range Picker -->
+<script type="text/javascript" src="//cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.js"></script>
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.css" />
+<div class="sidenav">
+  <a href="#" style="color:#fff;font-size: 28px;text-align: center;">PreTUPS&trade;</a>
+  <a href="#about" class="fa fa-fw fa-home">&nbsp;&nbsp;Home</a>
+  <a href="#services" class="fa fa-fw fa-envelope">&nbsp;&nbsp;Recharge</a>
+  <a href="#clients" class="fa fa-globe">&nbsp;&nbsp;Channel to Channel</a>
+  <a href="#contact" class="fa fa-cloud">&nbsp;&nbsp;Operator to Channel</a>
+  <a href="#contact" class="fa fa-user">&nbsp;&nbsp;Channel User</a>
+  <a href="#contact" class="fa fa-user">&nbsp;&nbsp;Staff User</a>
+</div>
+
+<div class="main" style="background-color: #F5F6FA;">
+  <div class="panel-body">
+    <div class="content-area">
+        <div class="sub-bar">
+            <div class="sub-title">
+                <h4 style="font-weight: 200;color: #333333;font-size: 18px;padding: 22px 26px;margin-top: 5rem;">Reports and Enquiry > <b>View all Recharges</b></h4>
+            </div>
+        </div>
+  <div class="info-section">
+    <div class="panel-widget">
+          <h4 style="color:#181818;font-size:18px;margin-top: 28px;">Filters</h4>
+          <table>
+            <tr style="border-style: none;">
+                <td style="font-size:18px;">Date</td>
+                <td style="font-size:18px;">Products</td>
+            </tr>
+            <tr style="border-style: none;">
+                <td style="padding: 5px;font-size: 20px;"><input type="date" name="date"></td>
+                <td style="padding: 5px;font-size: 20px;"><input type="text" name="email"></td>
+            </tr>
+        </table>
+          <!-- <h4 style="font-size:18px;
+            margin-top: 25px !important;
+            margin-bottom: 11px !important;">Date</h4>
+          <div id="reportrange" style="background: #fff; cursor: pointer; padding: 5px 1px;border: 1px solid #ccc;width: 25%;">
+            <i class="glyphicon glyphicon-calendar fa fa-calendar"></i>&nbsp;
+            <span></span> 
+        </div>
+        <h4 style="font-size:18px;">Products</h4> -->
+
+    </div>
+    <!-- <div class="panel-widget" style="margin-top: 20px !important;"> -->
+        <div class="row">
+            <div class="col-lg-6 col-sm-12">
+                <div class="widget">
+                    <div class="widget-title no-margin">
+                        <h4>Value</h4>
+                        <!-- <div class="graph-inf"> <a href="#" class="serv1" title=""><i class="prpl-skn"></i> Past</a> <a href="#" class="serv2" title=""><i class="gren-skn"></i>Current</a> </div> -->
+                    </div>
+                    <div class="widget">
+                        <div class="revenue-chart line">
+                            <canvas id="bar"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-sm-12">
+                <div class="widget">
+                    <div class="widget-title no-margin">
+                        <h4>Count</h4>
+                        <!-- <div class="graph-inf"> <a href="#" class="serv1" title=""><i class="prpl-skn"></i> Past</a> <a href="#" class="serv2" title=""><i class="gren-skn"></i>Current</a> </div> -->
+                    </div>
+                    <div class="widget">
+                        <div class="revenue-chart line">
+                            <canvas _ngcontent-c0="" id="bar" width="509" height="254" style="display: block; width: 509px; height: 254px;" class="chartjs-render-monitor"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+  
+  <div class="widget">
+    <div class="quick-all-report">
+        <div class="row">
+            <div class="col-lg-2 col-md-2 col-sm-3">
+                <div class="quick-all">
+                    <!-- <span id="quick-visit" class="sparkline">1,5,2,7,9,6,7,11,9,13,12,15,14,18</span> -->
+                    <h4>3,403</h4>
+                    <p>Visits</p>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-3">
+                <div class="quick-all">
+                    <!-- <span id="quick-view" class="sparkline">6,4,7,2,9,8,2,5,4</span> -->
+                    <h4>67,456</h4>
+                    <p>Page Views</p>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-3">
+                <div class="quick-all">
+                    <!-- <span id="quick-page" class="sparkline">7,3,5,7,8,9,3,5,6</span> -->
+                    <h4>67.9</h4>
+                    <p>Page / Visits</p>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-3">
+                <div class="quick-all">
+                    <!-- <span id="quick-time" class="sparkline">7,5,2,6,7,8,5,8,7</span> -->
+                    <h4>00:02:03</h4>
+                    <p>Average Time</p>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-3">
+                <div class="quick-all">
+                    <!-- <span id="quick-returning" class="sparkline">4,6,7,8,3,5,8,6,5</span> -->
+                    <h4>25%</h4>
+                    <p>Returning Visits</p>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-3">
+                <div class="quick-all">
+                    <!-- <span id="quick-rate" class="sparkline">2,7,7,11,9,13,12,5,7</span> -->
+                    <h4>66.1%</h4>
+                    <p>Bounce Rate</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="visito-country-list">
+    <!-- <table>
+        <tr>
+          <th>Date</th>
+          <th>Total Count</th>
+        <th>Total Value</th>
+        </tr>
+        <tr>
+          <td>1st Feb</td>
+          <td>20</td>
+          <td>$100</td>
+        </tr>
+        <tr>
+          <td>2nd Feb</td>
+          <td>50</td>
+          <td>$150</td>
+        </tr>
+        <tr>
+          <td>3rd Feb</td>
+          <td>80</td>
+          <td>$300</td>
+        </tr>
+        <tr>
+          <td>4th Feb</td>
+          <td>120</td>
+          <td>$250</td>
+        </tr>
+      </table> -->
+      <table class="table table-striped d-none">  
+        <thead>  
+            <tr>  
+              <th>userName</th>  
+              <th>msisdn</th>  
+              <th>userID</th>  
+              <th>loginID</th>
+              <th>userNameMsisdn</th>  
+            </tr>  
+        </thead>  
+        <tbody>  
+          <tr *ngFor="let item of users">  
+            <td>{{ item.userName }}</td>  
+            <td>{{ item.msisdn }}</td>  
+            <td>{{ item.userID }}</td>  
+            <td>{{ item.loginID }}</td>
+            <td>{{ item.userNameMsisdn }}</td>  
+          </tr>  
+        </tbody>  
+      </table>  
+  </div>
+ 
+</div>
+
+<!-- <script type="text/javascript">
+$(function() {
+
+    var start = moment().subtract(29, 'days');
+    var end = moment();
+
+    function cb(start, end) {
+        $('#reportrange span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
+    }
+
+    $('#reportrange').daterangepicker({
+        startDate: start,
+        endDate: end,
+        ranges: {
+           'Today': [moment(), moment()],
+           'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+           'Last 7 Days': [moment().subtract(6, 'days'), moment()],
+           'Last 30 Days': [moment().subtract(29, 'days'), moment()],
+           'This Month': [moment().startOf('month'), moment().endOf('month')],
+           'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+        }
+    }, cb);
+
+    cb(start, end);
+    
+});
+</script> -->
+  <div style="margin-top:263px">
+   <div class="container">
+     <div class="card">
+       <div class="card-header">
+         <h4>Parent Component</h4>
+       </div>
+       <div class="card-body">
+         Pass data:<input type="text" class="form-control" [(ngModel)]="enterName"/>
+         <input type="button" value="send" (click)="TransferData()" class="btn btn-primary"/>
+         <app-home [parentData]="parentData"></app-home>
+         {{value}}
+         <app-home (sendData)="sendData($event)"></app-home>
+       </div>
+     </div>
+   </div>
+
+
+   <!--  without the click of button we need to send data to child component   -->
+   <div class="container">
+    <div class="card">
+      <div class="card-header">
+        <h4>Parent Component</h4>
+      </div>
+      <div class="card-body">
+        Pass data:<input type="text" class="form-control" [(ngModel)]="parentData"/>
+        <input type="button" value="send" (click)="TransferData()" class="btn btn-primary"/>
+        <app-home [parentData]="parentData"></app-home>
+      </div>
+    </div>
+  </div>
+  <!-- <div class="parent">
+<h2>Parent component</h2>
+<ul>
+  <li *ngFor=""let item of Home>{{item}}</li>
+</ul>
+
+    <app-home [home]="currentHome" (newHomeEvent)="addNewHome($event)"></app-home>
+  </div> -->
+</div>
